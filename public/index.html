@@ -7,9 +7,9 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title>init</title>
     <script type="module">
-      import {getSharedDays} from './utils/shared_days.js';
+      import { getSharedDays } from "./utils/shared_days.js";
       let days = getSharedDays();
-      document.title = `和魏同学在一起的第 ${days} 天`;
+      document.title = `和魏同学在一起的第 ${days + 1} 天`;
     </script>
   </head>
 
