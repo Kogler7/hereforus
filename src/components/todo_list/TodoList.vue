@@ -1,23 +1,23 @@
 <template>
-  <main>
+  <div>
     <div class="todo-list">
       <h1>Shared todo list</h1>
       <todo-add :tid="todoItemList.length" @add-todo="addTodo" />
       <todo-filter :selected="filter" @change-filter="filter = $event" />
       <todo-item-list :todo-item-list="filteredTodoItemList" />
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
 import { ref } from "vue";
 import { computed } from "@vue/runtime-core";
-import TodoAdd from "./components/todo_list/TodoAdd.vue";
-import TodoFilter from "./components/todo_list/TodoFilter.vue";
-import TodoItemList from "./components/todo_list/TodoItemList.vue";
+import TodoAdd from "./TodoAdd.vue";
+import TodoFilter from "./TodoFilter.vue";
+import TodoItemList from "./TodoItemList.vue";
 
 export default {
-  name: "App",
+  name: "TodoList",
   components: { TodoAdd, TodoFilter, TodoItemList },
   setup() {
     const todoItemList = ref([]);
@@ -46,22 +46,6 @@ export default {
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-main {
-  width: 100vw;
-  min-height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  background: rgb(203, 210, 240);
-}
-
 .todo-list {
   width: 60%;
   max-width: 400px;
