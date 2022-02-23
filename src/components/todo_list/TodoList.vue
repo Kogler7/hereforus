@@ -47,7 +47,7 @@ export default {
 
 <style>
 .todo-list {
-  width: 60%;
+  width: 40vw;
   max-width: 400px;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0, 0.15);
   border-radius: 24px;

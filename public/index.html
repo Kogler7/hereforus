@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <title>init</title>
-    <script type="module">
-      import { getSharedDays } from "./utils/shared_days.js";
-      let days = getSharedDays();
-      document.title = `和魏同学在一起的第 ${days + 1} 天`;
+    <title>here-for-us</title>
+    <script>
+      const INIT_DATE = new Date("2022-02-14T01:13:00");
+      let today = new Date();
+      let sharedDays = Math.floor((today - INIT_DATE) / (1000 * 24 * 3600));
+      document.title = `和魏同学在一起的第 ${sharedDays + 1} 天`;
     </script>
   </head>
 
   <body>
     <noscript>
-      <strong
-        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
-        properly without JavaScript enabled. Please enable it to
-        continue.</strong
-      >
+      <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to continue.
+      </strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
